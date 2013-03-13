@@ -19,5 +19,6 @@
     "jade": "~0.28.2",
     "james": "~0.1.4"
   },
-  "private": "true"
+  "private": "false",
+  "licence": "MIT"
 }
