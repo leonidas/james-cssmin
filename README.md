@@ -15,3 +15,8 @@ james.task('jade', function() {
 });
 
 ```
+
+## API
+
+`jade(options)`: Return a new Jade to HTML stream. Available options are listed in
+[Jade documentation](https://github.com/visionmedia/jade#options).
