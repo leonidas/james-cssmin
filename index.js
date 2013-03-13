@@ -1,17 +1,8 @@
-(function() {
-  var jade;
+var jade  = require('jade'),
+    james = require('james');
 
-  jade = require('jade');
-
-  module.exports = function(files) {
-    return files.map(function(file) {
-      return {
-        content: jade.compile(file.content, {
-          client: false
-        })(),
-        name: file.name.replace(/.jade$/, '.html')
-      };
-    });
-  };
-
-}).call(this);
+module.exports = function(options) {
+  return james.createStream(function(file, callback) {
+    callback(jade.compile(file, options)());
+  });
+};
