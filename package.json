@@ -8,16 +8,16 @@
     "test": "jshint ./**/*.js && mocha"
   },
   "dependencies": {
-    "james": "~0.0.4",
+    "james": "~0.1.5",
     "jade": "~0.28.2"
   },
   "devDependencies": {
-    "james-coffee": "~0.0.1",
+    "james-coffee": "~0.1.1",
     "mocha": "~1.8.2",
     "jshint": "~1.1.0",
     "readable-stream": "~1.0.2",
     "jade": "~0.28.2",
-    "james": "~0.1.4"
+    "james": "~0.1.5"
   },
   "licence": "MIT"
 }
