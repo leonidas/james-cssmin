@@ -1,16 +1,16 @@
 # Synopsis
 
-Jade to HTML transformer for [James.js](https://github.com/leonidas/james.js).
+CSS compressor for [James.js](https://github.com/leonidas/james.js). Uses [node-cssmin](https://github.com/jbleuzen/node-cssmin).
 
 ```javascript
-var james = require('james'),
-    jade  = require('james-jade');
+var james  = require('james'),
+    cssmin = require('james-jade');
 
 james.task('jade', function() {
     
-  james.list('src/**/*.jade').forEach(function(file) {
+  james.list('src/**/*.css').forEach(function(file) {
     james.read(file)
-      .transform(jade({filename: file}))
+      .transform(cssmin)
       .write(process.stdout);
   });
 });
@@ -19,5 +19,4 @@ james.task('jade', function() {
 
 ## API
 
-`jade(options)`: Returns a new Jade to HTML stream. Available options are listed in
-[Jade documentation](https://github.com/visionmedia/jade#options).
+`cssmin()`: Returns a new CSS compressor stream. Does not accept any options.

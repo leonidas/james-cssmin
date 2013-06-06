@@ -1,8 +1,8 @@
-var jade  = require('jade'),
+var cssmin = require('cssmin'),
     james = require('james');
 
-module.exports = function(options) {
+module.exports = function() {
   return james.createStream(function(file, callback) {
-    callback(jade.compile(file, options)());
+    callback(cssmin(file));
   });
 };

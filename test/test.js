@@ -1,19 +1,19 @@
 var assert = require('assert'),
     stream = require('readable-stream'),
-    jade   = require('../index.js');
+    cssmin = require('../index.js');
 
 describe('james-jade-static', function() {
 
-  it('should return Jade to HTML transformation stream', function(done){
+  it('should return a CSS compressor stream', function(done){
     var src  = new stream.PassThrough(),
         dest = new stream.PassThrough();
 
-    src.pipe(jade()).pipe(dest);
-    src.write('\ndiv\n  span Hello World!\n');
+    src.pipe(cssmin()).pipe(dest);
+    src.write('html {\nbackground-color: red;\n}');
     src.end();
 
     dest.on('finish', function() {
-      assert.equal(dest.read().toString(), '<div><span>Hello World!</span></div>');
+      assert.equal(dest.read().toString(), 'html{background-color:red}');
       done();
     });
   });

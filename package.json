@@ -1,6 +1,7 @@
 {
-  "name": "james-jade-static",
+  "name": "james-cssmin",
   "version": "0.1.1",
+  "repository": "https://github.com/leonidas/james-cssmin",
   "engines": {
     "node": ">=0.8.0"
   },
@@ -9,15 +10,15 @@
   },
   "dependencies": {
     "james": "~0.1.5",
-    "jade": "~0.28.2"
+    "cssmin": "~0.4.1"
   },
   "devDependencies": {
     "james-coffee": "~0.1.1",
     "mocha": "~1.8.2",
     "jshint": "~1.1.0",
     "readable-stream": "~1.0.2",
-    "jade": "~0.28.2",
-    "james": "~0.1.5"
+    "james": "~0.1.5",
+    "cssmin": "~0.4.1"
   },
   "licence": "MIT"
 }
