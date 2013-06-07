@@ -4,7 +4,7 @@ CSS compressor for [James.js](https://github.com/leonidas/james.js). Uses [node-
 
 ```javascript
 var james  = require('james'),
-    cssmin = require('james-jade');
+    cssmin = require('james-cssmin');
 
 james.task('jade', function() {
     
